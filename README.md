@@ -23,5 +23,5 @@ And includes a "wrapper" around the traditional DataFrame object:
 df = WrappedDataFrame.wrap(DataFrame.from_csv('aapl.csv'))
 df.computations = [Subtract('GROSS_PROFIT', equals='REVENUE', minus='COSTS'),
 	           Add('ASSETS', equals='LIABILITIES', plus='EQUITY')]
-df.update()
+df.recompute()
 ```
